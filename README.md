@@ -1,4 +1,5 @@
-# data_analysis
+# Dashboard
+## Vue 3 + Vite
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -10,19 +11,19 @@ This template should help get you started developing with Vue 3 in Vite.
 
 See [Vite Configuration Reference](https://vite.dev/config/).
 
-## Project Setup
+## Project Setup 依赖安装
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Compile and Hot-Reload for Development 开发环境
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Compile and Minify for Production 生产环境
 
 ```sh
 npm run build

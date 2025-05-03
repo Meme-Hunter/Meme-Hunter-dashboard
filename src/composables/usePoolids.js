@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 
 export function usePoolids() {
-  const poolIds = ref('AoUX6U31X7dYDsXmkg7GZWc98nj5oqBocJtiSiQakPjN')
+  const poolIds = ref('')
 
   function splitPoolIds() {
     if (!poolIds.value) return []

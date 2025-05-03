@@ -21,11 +21,14 @@
     </el-col>
   </el-row> -->
   <el-row :gutter="20">
-    <el-col :span="12">
+    <el-col :span="22">
       <Chart class="chart" ref="priceChart" :options="poolIdsPriceLineChat" :group="'myGroup'"
         @chartClick="handleChatClick" />
     </el-col>
-    <el-col :span="12">
+
+  </el-row>
+  <el-row :gutter="20">
+    <el-col :span="22">
       <Chart class="chart" ref="solChart" :options="poolIdsSolLineChat" :group="'myGroup'"
         @chartClick="handleChatClick" />
     </el-col>
@@ -42,9 +45,14 @@ import { useUserLimit } from '@/composables/userLimit'
 import * as echarts from 'echarts'
 import { DecimalsUtils } from '../../unit/decimals'
 import { BN } from '@coral-xyz/anchor'
+
 const { dateRange } = useDateRange()
 const { poolIds, splitPoolIds } = usePoolids()
 const { userLimit } = useUserLimit()
+const priceChart = ref()
+const solChart = ref()
+onMounted(async () => { })
+const handleChatClick = (params) => { }
 
 /**
  * 转换数据到价格的series数组 
@@ -107,9 +115,7 @@ function transformDataToSolSeries(data) {
 
   return series
 }
-const priceChart = ref()
-const solChart = ref()
-onMounted(async () => { })
+
 
 const poolIdsPriceLineChat = reactive({
   yAxis: {
@@ -137,7 +143,6 @@ const poolIdsSolLineChat = reactive({
   },
 })
 
-const handleChatClick = (params) => { }
 
 async function fetchStrategyPoolStateTimeRange(startTime, endTime, poolIds, limit, sortOrder) {
   if (poolIds.length < 0) {
