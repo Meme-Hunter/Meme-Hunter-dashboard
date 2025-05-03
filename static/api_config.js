@@ -1,0 +1,2 @@
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL
+export const API_BASE_URL = apiBaseUrl // 可修改成域名或其他 IP
